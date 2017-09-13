@@ -1,0 +1,870 @@
+/* !!
+ * Font Size + Family
+ * ===== ===== =====
+ */
+.font( @size: 1, @line: 1, @family: @family )
+{
+	font: @size / @line @family;
+}
+.size( @value: @size )
+{
+	font-size: round( @value / @size, 2 );
+}
+.large( @size: large )
+{
+	font-size: @size;
+}
+.small( @size: small )
+{
+	font-size: @size;
+}
+.family( @family: @family )
+{
+	font-family: @family;
+}
+
+
+/* !!
+ * Font Style
+ * ===== ===== =====
+ */
+.normal
+{
+	font-weight: normal;
+	font-style: normal;
+}
+.bold
+{
+	font-weight: bold;
+}
+.italic
+{
+	font-style: italic;
+}
+.oblique
+{
+	font-style: oblique;
+}
+
+
+/* !!
+ * Font Smooth
+ * ===== ===== =====
+ */
+.font-smooth
+{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+/* !!
+ * Size: Width + Height
+ * ===== ===== =====
+ */
+.width( @value: 0 )
+{
+	width: @value;
+}
+.height( @value: 0 )
+{
+	height: @value;
+}
+
+.width-percent( @value: 100% )
+{
+	width: @value;
+}
+.height-percent( @value: 100% )
+{
+	height: @value;
+}
+.line-height( @value: @size )
+{
+	line-height: @value;
+}
+
+.width-min( @value: 0 )
+{
+	min-width: @value;
+}
+.height-min( @value: 0 )
+{
+	min-height: @value;
+}
+
+.width-max( @value: 0 )
+{
+	max-width: @value;
+}
+.height-max( @value: 0 )
+{
+	max-height: @value;
+}
+
+.width-min-percent( @value: 0 )
+{
+	min-width: percentage( @value );
+}
+.height-min-percent( @value: 0 )
+{
+	min-height: percentage( @value );
+}
+
+.width-max-percent( @value: 0 )
+{
+	max-width: percentage( @value );
+}
+.height-max-percent( @value: 0 )
+{
+	max-height: percentage( @value );
+}
+
+
+/* !!
+ * Size: Margin + Padding
+ * ===== ===== =====
+ */
+.margin( @value: 0 )
+{
+	margin: @arguments;
+}
+.padding( @value: 0 )
+{
+	padding: @arguments;
+}
+.fit( @margin: 0, @padding: 0 )
+{
+	.margin( @margin );
+	.padding( @padding );
+}
+
+.margin-top( @value: 0 )
+{
+	margin-top: @value;
+}
+.margin-left( @value: 0 )
+{
+	margin-left: @value;
+}
+.margin-right( @value: 0 )
+{
+	margin-right: @value;
+}
+.margin-bottom( @value: 0 )
+{
+	margin-bottom: @value;
+}
+
+.padding-top( @value: 0 )
+{
+	padding-top: @value;
+}
+.padding-left( @value: 0 )
+{
+	padding-left: @value;
+}
+.padding-right( @value: 0 )
+{
+	padding-right: @value;
+}
+.padding-bottom( @value: 0 )
+{
+	padding-bottom: @value;
+}
+
+.center
+{
+	.margin-left( auto );
+	.margin-right( auto );
+}
+
+
+/* !!
+ * Azimuth: Top + Left + Right + Bottom
+ * ===== ===== =====
+ */
+.top( @value: 0 )
+{
+	top: @value;
+}
+.left( @value: 0 )
+{
+	left: @value;
+}
+.right( @value: 0 )
+{
+	right: @value;
+}
+.bottom( @value: 0 )
+{
+	bottom: @value;
+}
+
+.top-percent( @value: 100% )
+{
+	top: @value;
+}
+.left-percent( @value: 100% )
+{
+	left: @value;
+}
+.right-percent( @value: 100% )
+{
+	right: @value;
+}
+.bottom-percent( @value: 100% )
+{
+	bottom: @value;
+}
+
+
+/* !!
+ * Background
+ * ===== ===== =====
+ */
+.background( @value: transparent )
+{
+	background: @value;
+}
+.background-image( @url: '' )
+{
+	background-image: url( @url );
+}
+
+.background-color( @color: transparent )
+{
+	background-color: @color;
+}
+.background-rgba( @a: 1, @r: 0, @g: 0, @b: 0 )
+{
+	.background-color( rgba( @r, @g, @b, @a ) );
+}
+.rgba( @alpha: 0.75 )
+{
+	.background-rgba( @alpha );
+}
+
+.background-repeat( @value: no-repeat )
+{
+	background-repeat: @value;
+}
+.background-position( @x: center, @y: center )
+{
+	background-position: @x @y;
+}
+.background-size( @mode: auto )
+{
+	background-size: @mode;
+}
+
+
+/* !!
+ * color
+ * ===== ===== =====
+ */
+.color( @color: inherit )
+{
+	color: @color;
+}
+.rgb( @r: 36, @g: 36, @b: 36 )
+{
+	.color( rgb( @arguments ) );
+}
+
+
+/* !!
+ * Border
+ * ===== ===== =====
+ */
+.border( @space: 1px, @mode: solid, @color: @color-line )
+{
+	border: @arguments;
+}
+.border-none
+{
+	border: none;
+}
+.border-top( @space: 1px, @mode: solid, @color: @color-line )
+{
+	border-top: @arguments;
+}
+.border-left( @space: 1px, @mode: solid, @color: @color-line )
+{
+	border-left: @arguments;
+}
+.border-right( @space: 1px, @mode: solid, @color: @color-line )
+{
+	border-right: @arguments;
+}
+.border-bottom( @space: 1px, @mode: solid, @color: @color-line )
+{
+	border-bottom: @arguments;
+}
+.border-width( @space: 1px )
+{
+	border-width: @space;
+}
+.border-style( @mode: solid )
+{
+	border-style: @mode;
+}
+.border-color( @color: @color-line )
+{
+	border-color: @color;
+}
+
+
+/* !!
+ * Display
+ * ===== ===== =====
+ */
+.display( @mode: initial )
+{
+	display: @mode;
+}
+.none
+{
+	.display( none );
+}
+.block
+{
+	.display( block );
+}
+.inline
+{
+	.display( inline );
+}
+.inline-block
+{
+	.display( inline-block );
+}
+
+
+/* !!
+ * Display - Table
+ * ===== ===== =====
+ */
+.table
+{
+	.display( table );
+}
+.table-cell
+{
+	.display( table-cell );
+}
+.table-col
+{
+	.display( table-column );
+}
+.table-row
+{
+	.display( table-row );
+}
+
+
+/* !!
+ * Position
+ * ===== ===== =====
+ */
+.position( @value: static )
+{
+	position: @value;
+}
+.absolute
+{
+	.position( absolute );
+}
+.relative
+{
+	.position( relative );
+}
+.fixed
+{
+	.position( fixed );
+}
+.static
+{
+	.position( static );
+}
+.sticky
+{
+	.position( sticky );
+}
+
+
+/* !!
+ * Z Index
+ * ===== ===== =====
+ */
+.z-index( @value: auto )
+{
+	z-index: @value;
+}
+.z( @value: auto )
+{
+	.z-index( @value );
+}
+.z-max
+{
+	.z-index( 2147483584 );
+}
+
+
+/* !!
+ * Float
+ * ===== ===== =====
+ */
+.float( @direction: none )
+{
+	float: @direction;
+}
+.float-left
+{
+	.float( left );
+}
+.float-right
+{
+	.float( right );
+}
+.float-none
+{
+	.float( none );
+}
+
+
+/* !!
+ * Clear
+ * ===== ===== =====
+ */
+.clear( @direction: none )
+{
+	clear: @direction;
+}
+.clear-left
+{
+	.clear( left );
+}
+.clear-right
+{
+	.clear( right );
+}
+.clear-both
+{
+	.clear( both );
+}
+.clear-none
+{
+	.clear( none );
+}
+
+
+/* !!
+ * Over Flow
+ * ===== ===== =====
+ */
+.overflow( @mode: initial )
+{
+	overflow: @mode;
+}
+.over-hide
+{
+	.overflow( hidden );
+}
+.over-show
+{
+	.overflow( visible );
+}
+.over-auto
+{
+	.overflow( auto );
+}
+.over-scroll
+{
+	.overflow( scroll );
+}
+
+
+/* !!
+ * Scroll
+ * ===== ===== =====
+ */
+.scroll
+{
+	.over-scroll;
+}
+.scroll-x
+{
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+.scroll-y
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+/* !!
+ * Text Align
+ * ===== ===== =====
+ */
+.text( @direction: initial )
+{
+	text-align: @direction;
+}
+.text-left
+{
+	.text( left );
+}
+.text-right
+{
+	.text( right );
+}
+.text-center
+{
+	.text( center );
+}
+.start
+{
+	.text( start );
+}
+.end
+{
+	.text( end );
+}
+.justify
+{
+	.text( justify );
+}
+
+
+/* !!
+ * Text Vertical
+ * ===== ===== =====
+ */
+.vertical( @direction: initial )
+{
+	vertical-align: @direction;
+}
+.v-top
+{
+	.vertical( top );
+}
+.v-middle
+{
+	.vertical( middle );
+}
+.v-bottom
+{
+	.vertical( bottom );
+}
+.v-base
+{
+	.vertical( baseline );
+}
+.v-text
+{
+	.vertical( text-top );
+}
+
+
+/* !!
+ * Text Indent
+ * ===== ===== =====
+ */
+.first( @value: 0 )
+{
+	text-indent: @value;
+}
+.indent( @value: 0 )
+{
+	.first( round( @value / @size, 2 ) );
+}
+
+
+/* !!
+ * Text Letter Space
+ * ===== ===== =====
+ */
+.letter( @value: 0 )
+{
+	letter-spacing: round( @value / @size, 2 );
+}
+
+
+/* !!
+ * Text Break
+ * ===== ===== =====
+ */
+.text-keep
+{
+	word-wrap: normal;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+.text-break
+{
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: pre-line;
+}
+
+
+/* !!
+ * Text Over
+ * ===== ===== =====
+ */
+.text-over( @mode: ellipsis )
+{
+	text-overflow: @mode;
+}
+
+
+/* !!
+ * Text Ellipsis
+ * ===== ===== =====
+ */
+.ellipsis( @width: 0 )
+{
+	.width( @width );
+	.over-hide;
+	.text-keep;
+	.text-over;
+}
+
+
+/* !!
+ * Text Decoration
+ * ===== ===== =====
+ */
+.decoration( @color: @color-line, @mode: solid, @line: none )
+{
+	text-decoration: @arguments;
+}
+.line-over( @color: @color-line, @mode: solid )
+{
+	.decoration( @color, @mode, overline );
+}
+.line-under( @color: @color-line, @mode: solid )
+{
+	.decoration( @color, @mode, underline );
+}
+.line-through( @color: @color-line, @mode: solid )
+{
+	.decoration( @color, @mode, line-through );
+}
+.line-blink( @color: @color-line, @mode: solid )
+{
+	.decoration( @color, @mode, blink );
+}
+
+
+/* !!
+ * Opacity
+ * ===== ===== =====
+ */
+.opacity( @value: 1 )
+{
+-webkit-opacity: @value;
+   -moz-opacity: @value;
+     -o-opacity: @value;
+        opacity: @value;
+}
+.o-show
+{
+	.opacity(1);
+}
+.o-hide
+{
+	.opacity(0);
+}
+
+
+/* !!
+ * Radius
+ * ===== ===== =====
+ */
+.radius( @value: @radius )
+{
+-webkit-border-radius: @value;
+   -moz-border-radius: @value;
+     -o-border-radius: @value;
+        border-radius: @value;
+}
+
+
+/* !!
+ * Rotate
+ * ===== ===== =====
+ */
+.rotate( @value: 0deg )
+{
+-webkit-transform: rotate( @value );
+   -moz-transform: rotate( @value );
+     -o-transform: rotate( @value );
+        transform: rotate( @value );
+}
+
+
+/* !!
+ * Transform Origin
+ * ===== ===== =====
+ */
+.origin( @x, @y, @z )
+{
+-webkit-transform-origin: @arguments;
+   -moz-transform-origin: @arguments;
+     -o-transform-origin: @arguments;
+        transform-origin: @arguments;
+}
+
+
+/* !!
+ * Shadow
+ * ===== ===== =====
+ */
+.shadow( @x: 0, @y: .125rem, @length: .25rem, @color: rgba(0, 0, 0, .125), @in: '' )
+{
+	box-shadow: @arguments;
+}
+.no-shadow
+{
+	box-shadow: none;
+}
+.text-shadow( @x: 0, @y: .125rem, @length: .25rem, @color: rgba(0, 0, 0, .125) )
+{
+	text-shadow: @arguments;
+}
+
+
+/* !!
+ * Content Blank
+ * ===== ===== =====
+ */
+.content( @content: ' ' )
+{
+	content: @content;
+}
+
+
+/* !!
+ * Select
+ * ===== ===== =====
+ */
+.no-select
+{
+-webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+.auto-select
+{
+-webkit-touch-callout: inherit;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+       -o-user-select: auto;
+          user-select: auto;
+}
+
+
+/* !!
+ * Cursor Hand
+ * ===== ===== =====
+ */
+.cursor( @mode: auto )
+{
+	cursor: @mode;
+}
+.hand
+{
+	.cursor( pointer );
+}
+.move
+{
+	.cursor( move );
+}
+.wait
+{
+	.cursor( wait );
+}
+.help
+{
+	.cursor( help );
+}
+.crosshair
+{
+	.cursor( crosshair );
+}
+.hand-top
+{
+	.cursor( n-resize );
+}
+.hand-left
+{
+	.cursor( w-resize );
+}
+.hand-right
+{
+	.cursor( e-resize );
+}
+.hand-bottom
+{
+	.cursor( s-resize );
+}
+.hand-top-left, .hand-left-top
+{
+	.cursor( nw-resize );
+}
+.hand-top-right, .hand-right-top
+{
+	.cursor( ne-resize );
+}
+.hand-bottom-left, .hand-left-bottom
+{
+	.cursor( sw-resize );
+}
+.hand-bottom-right, .hand-right-bottom
+{
+	.cursor( se-resize );
+}
+
+
+/* !!
+ * Transform: Top + Left + Right + Bottom
+ * ===== ===== =====
+ */
+.transform( @x: -50%, @y: -50% )
+{
+-webkit-transform: translate(@x, @y);
+   -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+     -o-transform: translate(@x, @y);
+        transform: translate(@x, @y);
+}
+.affix
+{
+	.transform( -50%, -50% );
+}
+.affix-top
+{
+	.transform( 0, -100% );
+}
+.affix-left
+{
+	.transform( -100%, 0 );
+}
+.affix-right
+{
+	.transform( 100%, 0 );
+}
+.affix-bottom
+{
+	.transform( 0, 100% );
+}
+.affix-in
+{
+	.transform( 0, 0 );
+}

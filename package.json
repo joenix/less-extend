@@ -1,0 +1,18 @@
+{
+  "name": "less-extend",
+  "version": "1.2.2",
+  "description": "An extend package for less",
+  "main": "index.less",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "less",
+    "extend",
+    "less extend"
+  ],
+  "author": "joenix",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}

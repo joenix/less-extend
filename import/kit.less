@@ -1,0 +1,524 @@
+/* !!
+ * Console
+ * ===== ===== =====
+ */
+.console( @color: @Crimson )
+{
+	.border( 1px, solid, @color );
+}
+
+
+/* !!
+ * Clearfix
+ * ===== ===== =====
+ */
+.clearfix
+{
+	&:before, &:after
+	{
+		visibility: hidden;
+		display: table;
+		content: ' ';
+	}
+	&:after
+	{
+		clear: both;
+	}
+}
+
+
+/* !!
+ * Show + Hide
+ * ===== ===== =====
+ */
+.show
+{
+	.block;
+}
+.hide
+{
+	.none;
+}
+
+
+/* !!
+ * List Inline
+ * ===== ===== =====
+ */
+.list-inline
+{
+	& > li
+	{
+		.inline-block;
+	}
+}
+
+
+/* !!
+ * Screen
+ * ===== ===== =====
+ */
+.screen-max( @position: fixed )
+{
+	.position( @position );
+	.top;
+	.left;
+	.right;
+	.bottom;
+}
+.screen-center( @width: 50%, @height: 50%, @position: fixed )
+{
+	.width( @width );
+	.height( @height );
+	.top( 50% );
+	.left( 50% );
+	.transform;
+	.position( @position );
+}
+
+
+/* !!
+ * Central
+ * ===== ===== =====
+ */
+.central
+{
+	.screen-center( auto, auto, absolute );
+}
+.mediate
+{
+	.over-hide;
+	.relative;
+
+	& > img
+	{
+		.width( auto ) !important;
+		.height( auto );
+		.top( 50% );
+		.left( 50% );
+		.transform;
+		.absolute;
+	}
+}
+
+
+/* !!
+ * Scroll Bar
+ * ===== ===== =====
+ */
+.scrollbar( @color: rgba(0, 0, 0, .125) )
+{
+	&::-webkit-scrollbar-track
+	{
+		background-color: @color;
+	}
+	&::-webkit-scrollbar-thumb
+	{
+		background-color: @color;
+	}
+}
+.scrollbar-x( @space: .5rem, @color: rgba(0, 0, 0, .125) )
+{
+	.scrollbar( @color );
+
+	&::-webkit-scrollbar
+	{
+		width: @space;
+	}
+}
+.scrollbar-y( @space: .5rem, @color: rgba(0, 0, 0, .125) )
+{
+	.scrollbar( @color );
+
+	&::-webkit-scrollbar
+	{
+		height: @space;
+	}
+}
+
+
+/* !!
+ * Form Style Control
+ * ===== ===== =====
+ * ul.form-control
+ * => li
+ *  => label
+ *  => div
+ * ===== ===== =====
+ */
+.form-control( @distance: 20rem )
+{
+	& > li
+	{
+		.clearfix;
+
+		& > label
+		{
+			.left;
+			.width( @distance );
+		}
+
+		& > div
+		{
+			.margin-left( @distance );
+		}
+	}
+}
+
+
+/* !!
+ * Screen Fix
+ * ===== ===== =====
+ */
+.screen( @mode: fixed )
+{
+	.top;
+	.left;
+	.right;
+	.bottom;
+	.position( @mode );
+}
+.screen-top,
+.screen-left,
+.screen-right,
+.screen-bottom
+{
+	.fixed;
+}
+.screen-top,
+.screen-bottom
+{
+	.left;
+	.right;
+}
+.screen-left,
+.screen-right
+{
+	.top;
+	.bottom;
+}
+.screen-top
+{
+	.top;
+}
+.screen-bottom
+{
+	.bottom;
+}
+.screen-left
+{
+	.left;
+}
+.screen-right
+{
+	.right;
+}
+
+
+/* !!
+ * Fruit Layout
+ * ===== ===== =====
+ */
+.fruit-left( @space: 20rem, @crevice: 20rem )
+{
+	.clearfix;
+
+	& > .fruit-head, & > label
+	{
+		.float-left;
+		.width( @space );
+	}
+
+	& > .fruit-body, & > div
+	{
+		.margin-left( @space );
+		.padding-left( @crevice );
+	}
+}
+
+.fruit-right( @space: 20rem, @crevice: 20rem )
+{
+	.clearfix;
+
+	& > .fruit-head, & > label
+	{
+		.float-right;
+		.width( @space );
+	}
+
+	& > .fruit-body, & > div
+	{
+		.margin-right( @space );
+		.padding-right( @crevice );
+	}
+}
+
+
+/* !!
+ * Caret Arrow
+ * ===== ===== =====
+ */
+.caret-base
+{
+	.inline-block;
+	.v-middle;
+	.width;
+	.height;
+	.content;
+}
+.caret( @space: .5rem, @color: @color-line )
+{
+	.caret-base;
+
+	.border-width( @space @space 0 );
+	.border-style( solid solid none );
+	.border-color( @color transparent transparent );
+}
+.caret-top( @space: .5rem, @color: @color-line )
+{
+	.caret-base;
+
+	.border-width( 0 @space @space );
+	.border-style( none solid solid );
+	.border-color( transparent transparent @color );
+}
+.caret-bottom( @space: .5rem, @color: @color-line )
+{
+	.caret-base;
+
+	.border-width( @space @space 0 );
+	.border-style( solid solid none );
+	.border-color( @color transparent transparent );
+}
+.caret-left( @space: .5rem, @color: @color-line )
+{
+	.caret-base;
+
+	.border-width( @space @space @space 0 );
+	.border-style( solid solid solid none );
+	.border-color( transparent @color transparent transparent );
+}
+.caret-right( @space: .5rem, @color: @color-line )
+{
+	.caret-base;
+
+	.border-width( @space 0 @space @space );
+	.border-style( solid none solid solid );
+	.border-color( transparent transparent transparent @color );
+}
+
+
+/* !!
+ * Drop
+ * ===== ===== =====
+ */
+.drop
+{
+	.relative;
+
+	& > dd
+	{
+		.absolute;
+		.hide;
+	}
+
+	&:hover
+	{
+		& > dd
+		{
+			.show;
+		}
+
+	}
+}
+.drop-up,
+.drop-down,
+.drop-left,
+.drop-right
+{
+	.drop;
+}
+.drop-up
+{
+	& > dd
+	{
+		.bottom( 100% );
+	}
+}
+.drop-down
+{
+	& > dd
+	{
+		.top( 100% );
+	}
+}
+.drop-left
+{
+	& > dd
+	{
+		.right( 100% );
+	}
+}
+.drop-right
+{
+	& > dd
+	{
+		.left( 100% );
+	}
+}
+
+
+/* !!
+ * Easy Transition
+ * ===== ===== =====
+ */
+.effect( @speed: 1s, @type: all, @mode: ease )
+{
+	-webkit-transition: @type @speed @mode;
+	   -moz-transition: @type @speed @mode;
+	    -ms-transition: @type @speed @mode;
+	     -o-transition: @type @speed @mode;
+	        transition: @type @speed @mode;
+}
+.animate( @speed: @slow, @type: all )
+{
+	.effect( @speed, @type );
+}
+
+
+/* !!
+ * Animation For Keyframe
+ * ===== ===== =====
+ */
+.animation( @name: none, @duration: 0s, @timing: ease, @delay: 0, @count: infinite, @direction: normal )
+{
+	-webkit-animation: @arguments;
+	animation: @arguments;
+}
+// 动画名称
+.animation-name( @name: none )
+{
+	-webkit-animation-name: @name;
+	animation-name: @name;
+}
+// 动画持续时间
+.animation-duration( @duration: 0 )
+{
+	-webkit-animation-duration: @duration;
+	animation-duration: @duration;
+}
+/* !!
+ * Timing: 速率
+ * ----- ----- ----- ----- -----
+ * ease: 渐缓
+ * linear: 匀速
+ * ease-in: 匀加速
+ * ease-out: 匀减速
+ * ease-in-out: 匀加速 - 匀减速
+ * cubic-bezier: 贝塞尔曲线(x1, y1, x2, y2)
+ * ----- ----- ----- ----- -----
+ */
+.animation-timing( @time: ease )
+{
+	-webkit-animation-timing-function: @time;
+	animation-timing-function: @time;
+}
+// 动画开始时间
+.animation-delay( @delay: 0 )
+{
+	-webkit-animation-delay: @delay;
+	animation-delay: @delay;
+}
+// 动画播放次数
+.animation-count( @count: infinite )
+{
+	-webkit-animation-iteration-count: @count;
+	animation-iteration-count: @count;
+}
+// 动画播放方向: normal | alternate
+.animation-direction( @direction: normal )
+{
+	-webkit-animation-direction: @direction;
+	animation-direction: @direction;
+}
+// 动画状态: running | paused
+.animation-state( @state: running )
+{
+	-webkit-animation-play-state: @state;
+	animation-play-state: @state;
+}
+
+
+/* !!
+ * Gradient
+ * ===== ===== =====
+ */
+
+// Linear Gradient
+.linear-gradient( @begin: transparent, @end: transparent, @direct: top )
+{
+	background-image: -webkit-linear-gradient( @direct, @begin, @end );
+	background-image:    -moz-linear-gradient( @direct, @begin, @end );
+	background-image:     -ms-linear-gradient( @direct, @begin, @end );
+	background-image:      -o-linear-gradient( @direct, @begin, @end );
+	background-image:         linear-gradient( @direct, @begin, @end );
+}
+
+// Repeating Linear Gradient
+.repeat-linear( @begin: transparent 0%, @end: transparent 0%, @direct: top )
+{
+	background-image: -webkit-repeating-linear-gradient( @arguments );
+	background-image:    -moz-repeating-linear-gradient( @arguments );
+	background-image:     -ms-repeating-linear-gradient( @arguments );
+	background-image:      -o-repeating-linear-gradient( @arguments );
+	background-image:         repeating-linear-gradient( @arguments );
+}
+
+/* !!
+ * 径向渐变
+ * @shape: circle(等圆) | ellipse(椭圆)
+ * @size( @shape ): closest-side(圆心->近边) | closest-corner(圆心->近角) | farthest-side(圆心->远边) | farthest-corner(圆心->近角)
+ * @position: center | top | left | right | bottom | <percent>
+ * -----^----- -----^-----
+ */
+.radial-gradient( @begin: transparent 0%, @end: transparent 100%, @shape: circle, @position: center )
+{
+	background-image: -webkit-radial-gradient( @shape at @position, @begin, @end );
+	background-image:    -moz-radial-gradient( @shape at @position, @begin, @end );
+	background-image:      -o-radial-gradient( @shape at @position, @begin, @end );
+	background-image:         radial-gradient( @shape at @position, @begin, @end );
+}
+
+
+/* !!
+ * Old Gradient
+ * ===== ===== =====
+ */
+.gradient-linear( @from: @color-bg, @to: @color-bg )
+{
+	background: -moz-linear-gradient( top, @from, @to );
+	background: -webkit-gradient( linear, 0 0, 0 100%, from( @from ), to( @to ) );
+}
+.gradient-radial( @from: @color-bg, @to: @color-bg )
+{
+	background: -moz-radial-gradient(center, ellipse cover,  @from 0%, @to 100%);
+	background: -webkit-radial-gradient(center, ellipse cover,  @from 0%, @to 100%);
+}
+
+
+// 倒影: above | below | left | right
+.reflect( @dir: below, @offset: 1rem, @mode: -webkit-linear-gradient( top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, .25) ) )
+{
+	-webkit-box-reflect: @dir @offset @mode;
+	box-reflect: @dir @offset @mode;
+}
+
+
+// 价格
+.price( @symbol: '￥' )
+{
+	&:before
+	{
+		.content(@symbol);
+	}
+}
