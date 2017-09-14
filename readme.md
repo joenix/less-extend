@@ -1,5 +1,6 @@
 # Less Extend
-[![npm version](https://img.shields.io/badge/less--extend-1.2.2-green.svg)](https://img.shields.io/badge/less--extend-1.1.18-green.svg)
+[![npm version](https://img.shields.io/badge/less--extend-1.2.3-green.svg)](https://img.shields.io/badge/less--extend-1.1.18-green.svg)
+[![github version](https://img.shields.io/badge/less--extend-1.2.3-blue.svg)](https://img.shields.io/badge/less--extend-1.2.3-blue.svg)
 
 ` Less Extend ` is A Less Extention For Faster Efficient Develop.
 

@@ -1,6 +1,6 @@
 {
   "name": "less-extend",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "An extend package for less",
   "main": "index.less",
   "scripts": {
