@@ -465,6 +465,119 @@
 
 
 /* !!
+ * List Style
+ * ===== ===== =====
+ */
+.list-style( @mode: none )
+{
+	list-style: @mode;
+}
+// 实心圆
+.list-disc
+{
+	.list-style( disc );
+}
+// 空心圆
+.list-circle
+{
+	.list-style( circle );
+}
+// 实心方块
+.list-square
+{
+	.list-style( square );
+}
+// 数字
+.list-decimal
+{
+	.list-style( decimal );
+}
+// 0开头的数字
+.list-zero
+{
+	.list-style( decimal-leading-zero );
+}
+
+// 小写罗马数字
+.list-roman-lower
+{
+	.list-style( lower-roman );
+}
+// 大写罗马数字
+.list-roman-upper
+{
+	.list-style( upper-roman );
+}
+// 小写英文字母
+.list-alpha-lower
+{
+	.list-style( lower-alpha );
+}
+// 大写英文字母
+.list-alpha-upper
+{
+	.list-style( upper-alpha );
+}
+// 小写拉丁字母
+.list-latin-lower
+{
+	.list-style( lower-latin );
+}
+// 大写拉丁字母
+.list-latin-upper
+{
+	.list-style( uper-latin );
+}
+// 希腊字母
+.list-greek
+{
+	.list-style( lower-greek );
+}
+
+// 传统的希伯来编号方式
+.list-hebrew
+{
+	.list-style( hebrew );
+}
+// 传统的亚美尼亚编号方式
+.list-armenian
+{
+	.list-style( armenian );
+}
+// 传统的乔治亚编号方式
+.list-georgian
+{
+	.list-style( georgian );
+}
+// 简单的表意数字
+.list-cjk
+{
+	.list-style( cjk-ideographic );
+}
+
+// a, i, u, e, o, ka, ki
+.list-hiragana
+{
+	.list-style( hiragana );
+}
+// A, I, U, E, O, KA, KI
+.list-katakana
+{
+	.list-style( katakana );
+}
+// i, ro, ha, ni, ho, he, to
+.list-hiragana-iroha
+{
+	.list-style( hiragana-iroha );
+}
+// I, RO, HA, NI, HO, HE, TO
+.list-katakana-iroha
+{
+	.list-style( katakana-iroha );
+}
+
+
+/* !!
  * Over Flow
  * ===== ===== =====
  */

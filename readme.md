@@ -1,6 +1,6 @@
 # Less Extend
-[![npm version](https://img.shields.io/badge/npm-1.2.7-red.svg)](https://img.shields.io/badge/npm-1.2.7-red.svg)
-[![github version](https://img.shields.io/badge/github-1.2.7-blue.svg)](https://img.shields.io/badge/github-1.2.7-blue.svg)
+[![npm version](https://img.shields.io/badge/npm-1.2.8-red.svg)](https://img.shields.io/badge/npm-1.2.8-red.svg)
+[![github version](https://img.shields.io/badge/github-1.2.8-blue.svg)](https://img.shields.io/badge/github-1.2.8-blue.svg)
 
 ` Less Extend ` is A Less Extention For Faster Efficient Develop.
 
@@ -214,6 +214,29 @@ npm install --save-dev less-loader less
 - clear-right
 - clear-both
 - clear-none
+
+#### List Style
+- list-style
+- list-disc
+- list-circle
+- list-square
+- list-decimal
+- list-zero
+- list-roman-lower
+- list-roman-upper
+- list-alpha-lower
+- list-alpha-upper
+- list-latin-lower
+- list-latin-upper
+- list-greek
+- list-hebrew
+- list-armenian
+- list-georgian
+- list-cjk
+- list-hiragana
+- list-katakana
+- list-hiragana-iroha
+- list-katakana-iroha
 
 #### Over Flow
 - overflow
