@@ -376,13 +376,13 @@
  * Easy Transition
  * ===== ===== =====
  */
-.effect( @speed: 1s, @type: all, @mode: ease )
+.effect( @speed: 1s, @type: all, @mode: ease, @delay: 0s )
 {
-	-webkit-transition: @type @speed @mode;
-	   -moz-transition: @type @speed @mode;
-	    -ms-transition: @type @speed @mode;
-	     -o-transition: @type @speed @mode;
-	        transition: @type @speed @mode;
+	-webkit-transition: @type @speed @mode @delay;
+	   -moz-transition: @type @speed @mode @delay;
+	    -ms-transition: @type @speed @mode @delay;
+	     -o-transition: @type @speed @mode @delay;
+	        transition: @type @speed @mode @delay;
 }
 .animate( @speed: @slow, @type: all )
 {
