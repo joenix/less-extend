@@ -93,6 +93,7 @@
 {
 	.over-hide;
 	.relative;
+	.block;
 
 	& > img
 	{
@@ -150,7 +151,7 @@
  *  => div
  * ===== ===== =====
  */
-.form-control( @distance: 20rem )
+.form-control( @distance: 20rem, @space: 1rem )
 {
 	& > li
 	{
@@ -164,7 +165,12 @@
 
 		& > div
 		{
-			.margin-left( @distance );
+			.margin-left( @distance + @space );
+		}
+
+		& > small
+		{
+			.margin-left( @space );
 		}
 	}
 }

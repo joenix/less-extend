@@ -71,13 +71,13 @@
 	height: @value;
 }
 
-.width-percent( @value: 100% )
+.width-percent( @value: 100 )
 {
-	width: @value;
+	width: percentage( @value / 100 );
 }
-.height-percent( @value: 100% )
+.height-percent( @value: 100 )
 {
-	height: @value;
+	height: percentage( @value / 100 );
 }
 .line-height( @value: @size )
 {
@@ -234,7 +234,15 @@
 }
 .background-image( @url: '' )
 {
-	background-image: url( @url );
+	background-image: @url;
+}
+.background-url( @url: '' )
+{
+	.background-image( url( @url ) );
+}
+.background-uri( @url: '' )
+{
+	.background-image( data-uri( @url ) );
 }
 
 .background-color( @color: transparent )
@@ -776,6 +784,10 @@
 {
 	.decoration( @color, @mode, blink );
 }
+.line-none
+{
+	.decoration( none );
+}
 
 
 /* !!
@@ -842,7 +854,7 @@
  * Shadow
  * ===== ===== =====
  */
-.shadow( @x: 0, @y: .125rem, @length: .25rem, @color: rgba(0, 0, 0, .125), @in: '' )
+.shadow( @args: 0 .125rem .25rem rgba(0, 0, 0, .125) )
 {
 	box-shadow: @arguments;
 }
@@ -850,7 +862,7 @@
 {
 	box-shadow: none;
 }
-.text-shadow( @x: 0, @y: .125rem, @length: .25rem, @color: rgba(0, 0, 0, .125) )
+.text-shadow( @args: 0 .125rem .25rem rgba(0, 0, 0, .125) )
 {
 	text-shadow: @arguments;
 }
@@ -985,4 +997,14 @@
 .affix-in
 {
 	.transform( 0, 0 );
+}
+
+
+/* !!
+ * Over Lay
+ * ===== ===== =====
+ */
+.overlay
+{
+	pointer-events: none;
 }
