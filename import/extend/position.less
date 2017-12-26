@@ -1,0 +1,65 @@
+/* !!
+ * Position
+ * ===== ===== =====
+ */
+.position ( @mode: static )
+{
+	position: @mode;
+}
+
+.static
+{
+	.position;
+}
+.absolute
+{
+	.position( absolute );
+}
+.relative
+{
+	.position( relative );
+}
+.fixed
+{
+	.position( fixed );
+}
+
+
+/* !!
+ * Azimuth
+ * ===== ===== =====
+ */
+.top ( @value: 0 )
+{
+	top: @value;
+}
+.left ( @value: 0 )
+{
+	left: @value;
+}
+.right ( @value: 0 )
+{
+	right: @value;
+}
+.bottom ( @value: 0 )
+{
+	bottom: @value;
+}
+
+
+/* !!
+ * Z Axis
+ * ===== ===== =====
+ */
+.z-index ( @value: auto )
+{
+	z-index: @value;
+}
+.z ( @value: auto )
+{
+	.z-index( @value );
+}
+.z-max
+{
+	.z-index( 2147483584 );
+}

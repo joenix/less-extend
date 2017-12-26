@@ -1,0 +1,56 @@
+/* !!
+ * Flex
+ * ===== ===== =====
+ */
+.flex ( @mode: none )
+{
+	.pre( flex, @mode );
+}
+
+.flex-grow ( @value: 0 )
+{
+	.pre( flex-grow, @value );
+}
+.flex-shrink ( @value: 0 )
+{
+	.pre( flex-shrink, @value );
+}
+.flex-basis ( @value: auto )
+{
+	.pre( flex-basis, @value );
+}
+
+.flex-flow ( @mode: unset )
+{
+	.pre( flex-flow, @mode );
+}
+.flex-direction ( @mode: row )
+{
+	.pre( flex-direction, @mode );
+}
+.flex-wrap ( @mode: nowrap )
+{
+	.pre( flex-wrap, @mode );
+}
+
+.flex-align ( @mode: stretch )
+{
+	.pre( align-content, @mode );
+}
+.flex-align-items ( @mode: stretch )
+{
+	.pre( align-items, @mode );
+}
+.flex-align-self ( @mode: auto )
+{
+	.pre( align-self, @mode );
+}
+.flex-justify ( @mode: flex-start )
+{
+	.pre( justify-content, @mode );
+}
+
+.flex-order ( @index: 0 )
+{
+	order: @index;
+}

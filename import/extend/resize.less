@@ -1,0 +1,30 @@
+/* !!
+ * Resize
+ * ===== ===== =====
+ */
+.resize ( @mode: both )
+{
+	resize: @mode;
+}
+.resize-none
+{
+	.resize( none );
+}
+.resize-horizontal
+{
+	.size( horizontal );
+}
+.resize-vertical
+{
+	.size( vertical );
+}
+
+
+/* !!
+ * Zoom
+ * ===== ===== =====
+ */
+.zoom ( @value: normal )
+{
+	zoom: @value;
+}

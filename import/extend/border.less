@@ -1,0 +1,81 @@
+/* !!
+ * Border
+ * ===== ===== =====
+ */
+.border ( @value: none )
+{
+	border: @value;
+}
+
+.border-size ( @size: 1px )
+{
+	border-width: @size;
+}
+
+.border-color ( @color: transparent )
+{
+	border-color: @color;
+}
+
+.border-style ( @mode: none )
+{
+	border-style: @mode;
+}
+
+.border-top ( @value: none )
+{
+	border-top: @value;
+}
+.border-left ( @value: none )
+{
+	border-left: @value;
+}
+.border-right ( @value: none )
+{
+	border-right: @value;
+}
+.border-bottom ( @value: none )
+{
+	border-bottom: @value;
+}
+
+.border-horizontal ( @value: none )
+{
+	.border-left( @value );
+	.border-right( @value );
+}
+.border-vertical ( @value: none )
+{
+	.border-top( @value );
+	.border-bottom( @value );
+}
+
+
+/* !!
+ * Outline
+ * ===== ===== =====
+ */
+.outline ( @value: none )
+{
+	outline: @value;
+}
+
+.outline-size ( @size: medium )
+{
+	outline-width: @size;
+}
+
+.outline-color ( @color: invert )
+{
+	outline-color: @color;
+}
+
+.outline-style ( @mode: none )
+{
+	outline-style: @mode;
+}
+
+.outline-offset ( @value: 0 )
+{
+	outline-offset: @value;
+}

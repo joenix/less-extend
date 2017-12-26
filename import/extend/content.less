@@ -1,0 +1,30 @@
+/* !!
+ * Content
+ * ===== ===== =====
+ */
+.content ( @value: '' )
+{
+	content: @value;
+}
+.counter ( @name: '' )
+{
+	.content( counter( @name ) );
+}
+.counter-increment ( @name: none )
+{
+	counter-increment: @name;
+}
+.counter-reset ( @index: none )
+{
+	counter-reset: @index;
+}
+
+
+/* !!
+ * Quote
+ * ===== ===== =====
+ */
+.quote ( @rule: none )
+{
+	quotes: @rule;
+}

@@ -89,8 +89,10 @@
 {
 	.screen-center( auto, auto, absolute );
 }
-.mediate
+.mediate( @w: 100px, @h: 100px )
 {
+	.width( @w );
+	.height( @h );
 	.over-hide;
 	.relative;
 	.block;
@@ -329,14 +331,18 @@
 	& > dd
 	{
 		.absolute;
-		.hide;
+		.o-hide;
+		.width-max;
+		.height-max;
 	}
 
 	&:hover
 	{
 		& > dd
 		{
-			.show;
+			.o-show;
+			.width-max( none );
+			.height-max( none );
 		}
 
 	}
@@ -399,8 +405,16 @@
 /* !!
  * Animation For Keyframe
  * ===== ===== =====
+ * duration: 动画时长
+ * delay: 动画起始时间
+ * name: 名称
+ * function: 动画类型
+ * count: 循环次数: infinite
+ * mode: 动画结束后: forwards backwards both
+ * direction: 反复: normal alternate
+ * ===== ===== =====
  */
-.animation( @name: none, @duration: 0s, @timing: ease, @delay: 0, @count: infinite, @direction: normal )
+.animation( @duration: 0s, @delay: 0, @name: none, @function: ease, @count: infinite, @mode: forwards, @direction: alternate )
 {
 	-webkit-animation: @arguments;
 	animation: @arguments;

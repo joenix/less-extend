@@ -764,25 +764,29 @@
  * Text Decoration
  * ===== ===== =====
  */
-.decoration( @color: @color-line, @mode: solid, @line: none )
+.decoration( @mode: solid )
 {
-	text-decoration: @arguments;
+	text-decoration: @mode;
 }
-.line-over( @color: @color-line, @mode: solid )
+.line-solid
 {
-	.decoration( @color, @mode, overline );
+	.decoration( solid );
 }
-.line-under( @color: @color-line, @mode: solid )
+.line-over
 {
-	.decoration( @color, @mode, underline );
+	.decoration( overline );
 }
-.line-through( @color: @color-line, @mode: solid )
+.line-under
 {
-	.decoration( @color, @mode, line-through );
+	.decoration( underline );
 }
-.line-blink( @color: @color-line, @mode: solid )
+.line-through
 {
-	.decoration( @color, @mode, blink );
+	.decoration( line-through );
+}
+.line-blink
+{
+	.decoration( blink );
 }
 .line-none
 {
@@ -834,6 +838,55 @@
    -moz-transform: rotate( @value );
      -o-transform: rotate( @value );
         transform: rotate( @value );
+}
+.rotate-3d( @x: 0deg, @y: 0deg, @z: 0deg, @a: 0deg )
+{
+-webkit-transform: rotate3d( @x, @y, @z, @a );
+   -moz-transform: rotate3d( @x, @y, @z, @a );
+     -o-transform: rotate3d( @x, @y, @z, @a );
+        transform: rotate3d( @x, @y, @z, @a );
+}
+.rotate-x( @value: 0deg )
+{
+-webkit-transform: rotateX( @value );
+   -moz-transform: rotateX( @value );
+     -o-transform: rotateX( @value );
+        transform: rotateX( @value );
+}
+.rotate-y( @value: 0deg )
+{
+-webkit-transform: rotateY( @value );
+   -moz-transform: rotateY( @value );
+     -o-transform: rotateY( @value );
+        transform: rotateY( @value );
+}
+.rotate-z( @value: 0deg )
+{
+-webkit-transform: rotateZ( @value );
+   -moz-transform: rotateZ( @value );
+     -o-transform: rotateZ( @value );
+        transform: rotateZ( @value );
+}
+
+
+/* !!
+ * Scale
+ * ===== ===== =====
+ */
+.scale( @x: 1, @y: 1 )
+{
+-webkit-transform: scale( @x, @y );
+   -moz-transform: scale( @x, @y );
+     -o-transform: scale( @x, @y );
+        transform: scale( @x, @y );
+}
+.scale-x( @x: 1 )
+{
+	.scale( @x, 1 );
+}
+.scale-y( @y: 1 )
+{
+	.scale( 1, @y );
 }
 
 
@@ -974,6 +1027,14 @@
      -o-transform: translate(@x, @y);
         transform: translate(@x, @y);
 }
+.affix-none
+{
+-webkit-transform: none;
+   -moz-transform: none;
+    -ms-transform: none;
+     -o-transform: none;
+        transform: none;
+}
 .affix
 {
 	.transform( -50%, -50% );
@@ -997,6 +1058,70 @@
 .affix-in
 {
 	.transform( 0, 0 );
+}
+
+
+/* !!
+ * Filter
+ * ===== ===== =====
+ */
+.filter( @args: initial )
+{
+	filter: @args;
+}
+.filter-none
+{
+	filter: initial;
+}
+// 模糊
+.filter-blur( @px: 0 )
+{
+	.filter( blur( @px ) );
+}
+// 明亮度
+.filter-brightness( @percent: 1 )
+{
+	.filter( brightness( @percent ) );
+}
+// 对比度
+.filter-contrast( @percent: 1 )
+{
+	.filter( contrast( @percent ) );
+}
+// 灰度
+.filter-grayscale( @percent: 0 )
+{
+	.filter( grayscale( @percent ) )
+}
+// 色环
+.filter-hue( @deg: 0deg )
+{
+	.filter( hue-rotate( @deg ) );
+}
+// 反转
+.filter-invert( @percent: 0 )
+{
+	.filter( invert( @percent ) );
+}
+// 透明度
+.filter-opacity( @percent: 1 )
+{
+	.filter( opacity( @percent ) );
+}
+// 饱和度
+.filter-saturate( @percent: 1 )
+{
+	.filter( saturate( @percent ) );
+}
+// 深褐
+.filter-sepia( @percent: 0 )
+{
+	.filter( sepia( @percent ) );
+}
+// SVG
+.filter-svg( @svg: '' )
+{
+	.filter( url( @svg ) );
 }
 
 

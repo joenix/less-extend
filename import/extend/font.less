@@ -1,0 +1,71 @@
+// Size
+.size ( @value: 1rem )
+{
+	font-size: @value;
+}
+
+// Family
+.family ( @family: @font-default )
+{
+	font-family: @family;
+}
+
+// Style
+.style ( @mode: normal )
+{
+	font-style: @mode;
+}
+
+// Weight
+.weight ( @weight: normal )
+{
+	font-weight: @weight;
+}
+
+// Variant
+.variant ( @mode: none )
+{
+	font-variant: @mode;
+}
+
+// Adjust
+.adjust ( @value: 1 )
+{
+	font-size-adjust: @value;
+}
+
+// Stretch
+.stretch ( @mode: normal )
+{
+	font-stretch: @mode;
+}
+
+// Weight Extend
+.bold
+{
+	.weight( bold );
+}
+.thin
+{
+	.weight( lighter );
+}
+
+// Style Extend
+.italic
+{
+	.style( italic );
+}
+.oblique
+{
+	.style( oblique );
+}
+
+// Family Extend
+.fantasy
+{
+	.family( fantasy );
+}
+.mono
+{
+	.family( monospace );
+}

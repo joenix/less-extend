@@ -1,0 +1,49 @@
+/* !!
+ * Display
+ * ===== ===== =====
+ */
+.display ( @mode: unset )
+{
+	display: @mode;
+}
+.none
+{
+	.display( none );
+}
+.block
+{
+	.display( block );
+}
+.inline
+{
+	.display( inline );
+}
+.inline-block
+{
+	.display( inline-block );
+}
+.flex
+{
+	.display( flex );
+}
+.show
+{
+	.display( block );
+}
+
+/* !!
+ * Visible
+ * ===== ===== =====
+ */
+.visible ( @mode: visible )
+{
+	visible: @mode;
+}
+.cover
+{
+	.visible( hidden );
+}
+.collapse
+{
+	.visible( collapse );
+}

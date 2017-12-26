@@ -1,0 +1,49 @@
+/* !!
+ * Color
+ * ===== ===== =====
+ */
+.color ( @value: @transparent )
+{
+	color: @value;
+}
+
+.color-lighten ( @value: transparent, @ratio: 0 )
+{
+	.color( lighten( @value, percentage( @ratio ) ) );
+}
+.color-darken ( @value: transparent, @ratio: 0 )
+{
+	.color( darken( @value, percentage( @ratio ) ) );
+}
+
+.rgb ( @red: 0, @green: 0, @blue: 0 )
+{
+	.color( rgb( @red, @green, @blue ) );
+}
+.rgba ( @red: 0, @green: 0, @blue: 0, @alpha: 1 )
+{
+	.color( rgba( @red, @green, @blue, @alpha ) );
+}
+
+.hsl ( @hue: 0, @saturation: 1, @lightness: 1 )
+{
+	.color( hsl( @hue, percentage( @saturation ), percentage( @lightness ) ) );
+}
+.hsla ( @hue: 0, @saturation: 1, @lightness: 1, @alpha: 1 )
+{
+	.color( hsla( @hue, percentage( @saturation ), percentage( @lightness ), @alpha ) );
+}
+
+.hsv ( @hue: 0, @saturation: 1, @value: 1 )
+{
+	.color( hsl( @hue, percentage( @saturation ), percentage( @value ) ) );
+}
+.hsva ( @hue: 0, @saturation: 1, @value: 1, @alpha: 1 )
+{
+	.color( hsla( @hue, percentage( @saturation ), percentage( @value ), @alpha ) );
+}
+
+.transparent
+{
+	.color;
+}

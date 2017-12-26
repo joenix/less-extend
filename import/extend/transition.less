@@ -1,0 +1,47 @@
+/* !!
+ * Transition
+ * ===== ===== =====
+ * Property: 属性名称
+ * Duration: 动画时长
+ * Function: 过渡特效
+ * Delay:    延迟执行
+ * ===== ===== =====
+ */
+.transition ( @property: none, @duration: 0s, @function: linear, @delay: 0s )
+{
+	.pre( transition, @arguments );
+}
+
+// None | All
+.transition-property ( @mode: all )
+{
+	.pre( transition-property, @mode );
+}
+// Time
+.transition-duration ( @value: 0s )
+{
+	.pre( transition-duration, @value );
+}
+/* !!
+ * Timing Function
+ * ===== ===== =====
+ * linear: 线性过渡 => (0.0, 0.0, 1.0, 1.0)
+ * ease: 平滑过渡 => (0.25, 0.1, 0.25, 1.0)
+ * ease-in: 由慢到快 => (0.42, 0, 1.0, 1.0)
+ * ease-out: 由快到慢 => (0, 0, 0.58, 1.0)
+ * ease-in-out: 由慢到快再到慢 => (0.42, 0, 0.58, 1.0)
+ * step-start: steps(1, start)
+ * step-end: steps(1, end)
+ * steps: (<integer>, [ start | end ])
+ * cubic-bezier: (<number>, <number>, <number>, <number>)
+ * ===== ===== =====
+ */
+.transition-function ( @mode: linear )
+{
+	.pre( transition-timing-function, @mode );
+}
+// Time
+.transition-delay ( @value: 0s )
+{
+	.pre( transition-delay, @value );
+}

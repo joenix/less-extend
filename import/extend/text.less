@@ -1,0 +1,154 @@
+/* !!
+ * Line Height
+ * ===== ===== =====
+ */
+.line-height ( @value: 1 )
+{
+	line-height: @value;
+}
+
+
+/* !!
+ * Align
+ * ===== ===== =====
+ */
+.align ( @mode: unset )
+{
+	text-align: @mode;
+}
+
+.text-center
+{
+	.align( center );
+}
+.text-left
+{
+	.align( left );
+}
+.text-right
+{
+	.align( right );
+}
+.text-justify
+{
+	.align( justify );
+}
+.text-start
+{
+	.align( start );
+}
+.text-end
+{
+	.align( end );
+}
+
+
+/* !!
+ * Verticle
+ * ===== ===== =====
+ */
+.vertical ( @mode: unset )
+{
+	vertical-align: @mode;
+}
+
+.text-base
+{
+	.vertical( baseline );
+}
+.text-word
+{
+	.vertical( text-top );
+}
+.text-middle
+{
+	.vertical( middle );
+}
+.text-top
+{
+	.vertical( top );
+}
+.text-bottom
+{
+	.vertical( bottom );
+}
+
+
+/* !!
+ * Decoration
+ * ===== ===== =====
+ */
+.text-decoration ( @mode: none )
+{
+	text-decoration: @mode;
+}
+
+.text-overline
+{
+	.text-decoration( overline );
+}
+.text-underline
+{
+	.text-decoration( underline );
+}
+.text-cross
+{
+	.text-decoration( line-through );
+}
+
+
+/* !!
+ * Direction
+ * ===== ===== =====
+ */
+.text-dir ( @mode: ltr )
+{
+	direction: @mode
+}
+.text-mode ( @mode: normal )
+{
+	writing-mode: @mode;
+}
+
+.text-lr
+{
+	.text-dir( ltr );
+}
+.text-rl
+{
+	.text-dir( rtl );
+}
+.text-vertical-lr
+{
+	.text-mode( tb-lr );
+}
+.text-vertical-rl
+{
+	.text-mode( tb-rl );
+}
+
+
+/* !!
+ * Select
+ * ===== ===== =====
+ */
+.user-select ( @mode: text )
+{
+	user-select: @mode;
+}
+.select-none
+{
+	.user-select( none );
+}
+.select-text
+{
+	.user-select( text );
+}
+.select-element
+{
+	.user-select( element );
+}
+.select-all
+{
+	.user-select( all );
+}

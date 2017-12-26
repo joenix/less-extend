@@ -1,0 +1,95 @@
+@import '../index.less';
+
+
+
+/* !!
+ * Special Thanks To: 陈琳
+ * ===== ===== =====
+ */
+
+@space-top: 60px;
+@space-side: 200px;
+
+header
+{
+	.height( @space-top );
+	.color( @color-silver );
+	.background-color( @color-dark );
+
+	.fixed;
+	.top;
+	.left;
+	.right;
+
+	&:hover
+	{
+		.color( @color-silver-extra );
+	}
+
+	h1
+	{
+		.size( 2rem );
+		.line-height( @space-top );
+		.padding-horizontal( 1rem );
+	}
+}
+
+aside
+{
+	.float-left;
+	.width( @space-side );
+	.background-color( @color-dark );
+
+	.fixed;
+	.top( @space-top );
+	.bottom;
+
+	.scroll-y;
+
+	nav
+	{}
+
+	a
+	{
+		.line-height( 2 );
+		.color( @color-silver );
+		.block;
+		.padding-horizontal( 1rem );
+	}
+
+	dl
+	{
+		.margin-bottom( 1rem );
+
+		&:first-child
+		{
+			.margin-top( 1rem );
+		}
+	}
+
+	dt
+	{
+		a
+		{
+			.color( @color-gray-extra );
+		}
+	}
+
+	dd
+	{
+		a
+		{
+			&:hover
+			{
+				.color( @color-gray-light );
+				.background-color( darken( @color-dark, 5% ) );
+			}
+		}
+	}
+}
+
+div
+{
+	.margin-top( @space-top );
+	.margin-left( @space-side );
+}

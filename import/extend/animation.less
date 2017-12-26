@@ -1,0 +1,71 @@
+/* !!
+ * Animation
+ * ===== ===== =====
+ * Name:      动画名称
+ * Duration:  持续时长
+ * Function:  过渡特效
+ * Delay:     延迟执行
+ * Count:     循环次数
+ * Direction: 运动方向
+ * Fill:      停止状态
+ * State:     执行状态
+ * ===== ===== =====
+ */
+.animation ( @name: none, @duration: 0s, @function: linear, @delay: 0s, @count: 1, @direction: normal, @fill: none, @state: running )
+{
+	.pre( animation, @arguments );
+}
+
+// None
+.animation-name ( @value: none )
+{
+	.pre( animation-name, @value );
+}
+// Time
+.animation-duration ( @value: 0s )
+{
+	.pre( animation-duration, @value );
+}
+/* !!
+ * Timing Function
+ * ===== ===== =====
+ * linear: 线性过渡 => (0.0, 0.0, 1.0, 1.0)
+ * ease: 平滑过渡 => (0.25, 0.1, 0.25, 1.0)
+ * ease-in: 由慢到快 => (0.42, 0, 1.0, 1.0)
+ * ease-out: 由快到慢 => (0, 0, 0.58, 1.0)
+ * ease-in-out: 由慢到快再到慢 => (0.42, 0, 0.58, 1.0)
+ * step-start: steps(1, start)
+ * step-end: steps(1, end)
+ * steps: (<integer>, [ start | end ])
+ * cubic-bezier: (<number>, <number>, <number>, <number>)
+ * ===== ===== =====
+ */
+.animation-function ( @value: 0s )
+{
+	.pre( animation-timing-function, @value );
+}
+// Time
+.animation-delay ( @value: 0s )
+{
+	.pre( animation-delay, @value );
+}
+// Count | Infinite
+.animation-count ( @value: 1 )
+{
+	.pre( animation-iteration-count, @value );
+}
+// Reverse | Alternate | Alternate-Reverse
+.animation-direction ( @mode: normal )
+{
+	.pre( animation-direction, @mode );
+}
+// Forwards | Backwards | Both
+.animation-fill ( @mode: none )
+{
+	.pre( animation-fill-mode, @mode );
+}
+// Running | Paused
+.animation-state ( @mode: running )
+{
+	.pre( animation-play-state, @mode );
+}

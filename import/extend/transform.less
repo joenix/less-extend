@@ -1,0 +1,167 @@
+/* !!
+ * Transform
+ * ===== ===== =====
+ */
+.transform ( @mode: none )
+{
+	.pre( transform, @mode );
+}
+
+
+/* !!
+ * Transform Function 2D
+ * ===== ===== =====
+ */
+
+/* !!
+ * Matrix: 矩阵变换
+ * ===== ===== =====
+ * Arguments: a, b, c, d, e, f
+ * ----- ----- -----
+ * ╔ a c e ╗   ╔ x ╗   ╔ ax + cy + e ╗
+ * ║ b d f ║ * ║ y ║ = ║ bx + dy + f ║
+ * ╚ 0 0 1 ╝   ╚ 1 ╝   ╚  0 +  0 + 1 ╝
+ * ----- ----- -----
+ * x = ax + cy + e;
+ * y = bx + dy + f;
+ * ===== ===== =====
+ */
+.matrix ( @a: 1, @b: 0, @c: 0, @d: 1, @e: 0, @f: 0 )
+{
+	.transform( matrix( @arguments ) );
+}
+
+// Translate: 位移
+.translate ( @x: 0, @y: 0 )
+{
+	.transform( translate( @arguments ) );
+}
+// TranslateX: x轴 平移
+.translate-x ( @x: 0 )
+{
+	.transform( translateX( @arguments ) );
+}
+// TranslateY: y轴 平移
+.translate-y ( @y: 0 )
+{
+	.transform( translateY( @arguments ) );
+}
+// TranslateZ: z轴 平移
+.translate-z ( @z: 0 )
+{
+	.transform( translateZ( @arguments ) );
+}
+
+// Rotate: 旋转
+.rotate ( @deg: 0 )
+{
+	.transform( rotate( @arguments ) );
+}
+// RotateX: x轴 旋转
+.rotate-x ( @x: 0 )
+{
+	.transform( rotateX( @arguments ) );
+}
+// RotateY: y轴 旋转
+.rotate-y ( @y: 0 )
+{
+	.transform( rotateY( @arguments ) );
+}
+// RotateZ: z轴 旋转
+.rotate-z ( @z: 0 )
+{
+	.transform( rotateZ( @arguments ) );
+}
+
+// Scale: 缩放
+.scale ( @x: 0, @y: 0 )
+{
+	.transform( scale( @arguments ) );
+}
+// ScaleX: x轴 缩放
+.scale-x ( @x: 0 )
+{
+	.transform( scaleX( @arguments ) );
+}
+// ScaleY: y轴 缩放
+.scale-y ( @y: 0 )
+{
+	.transform( scaleY( @arguments ) );
+}
+// ScaleZ: z轴 缩放
+.scale-z ( @z: 0 )
+{
+	.transform( scaleZ( @arguments ) );
+}
+
+// Skew: 斜切扭曲
+.skew ( @x: 0deg, @y: 0deg )
+{
+	.transform( skew( @arguments ) );
+}
+// SkewX: x轴 斜切扭曲
+.skew-x ( @x: 0deg )
+{
+	.transform( skewX( @arguments ) );
+}
+// SkewY: y轴 斜切扭曲
+.skew-y ( @y: 0deg )
+{
+	.transform( skewY( @arguments ) );
+}
+
+
+/* !!
+ * Transform Function 3D
+ * ===== ===== =====
+ */
+
+/* !!
+ * Matrix 3D: 3D 矩阵变换
+ * ===== ===== =====
+ * Arguments:
+ * - a, b, c, x,
+ * - d, e, f, y,
+ * - g, h, i, z,
+ * - j, k, l, 1,
+ * ----- ----- -----
+ * ╔ a d g j ╗
+ * ║ b e h k ║
+ * ║ c f i l ║
+ * ╚ x y z 1 ╝
+ * ===== ===== =====
+ */
+.matrix3d
+(
+	@a: 1, @b: 0, @c: 0, @x: 0,
+	@d: 0, @e: 1, @f: 0, @y: 0,
+	@g: 0, @h: 0, @i: 1, @z: 0,
+	@j: 0, @k: 0, @l: 0, @s: 1
+)
+{
+	.transform( matrix3d( @arguments ) );
+}
+
+// Translate 3D: 3D 位移
+.translate3d ( @x: 0, @y: 0, @z: 0 )
+{
+	.transform( translate3d( @arguments ) );
+}
+
+// Rotate 3D: 3D 旋转
+.rotate3d ( @x: 0, @y: 0, @z: 0, @r: 0deg )
+{
+	.transform( rotate3d( @arguments ) );
+}
+
+// Scale 3D: 3D 缩放
+.scale3d ( @x: 0, @y: 0, @z: 0 )
+{
+	.transform( scale3d( @arguments ) );
+}
+
+// Perspective: 透视距离
+.perspective ( @value: none )
+{
+	.transform( perspective( @arguments ) );
+}

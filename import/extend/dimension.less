@@ -1,0 +1,191 @@
+/* !!
+ * Width
+ * ===== ===== =====
+ */
+
+.width ( @value: 0, @zoom: 1 )
+{
+	width: @value * @zoom;
+}
+
+.width-percent ( @value: 0 )
+{
+	width: percentage( @value );
+}
+
+/* !!
+ * Height
+ * ===== ===== =====
+ */
+
+.height ( @value: 0, @zoom: 1 )
+{
+	height: @value * @zoom;
+}
+
+.height-percent ( @value: 0 )
+{
+	height: percentage( @value );
+}
+
+/* !!
+ * Width Limit
+ * ===== ===== =====
+ */
+.width-max ( @value: 0, @zoom: 1 )
+{
+	max-width: @value * @zoom;
+}
+.width-min ( @value: 0, @zoom: 1 )
+{
+	min-width: @value * @zoom;
+}
+.width-limit ( @min: 0, @max: 0 )
+{
+	.width-min( @min );
+	.width-max( @max );
+}
+
+/* !!
+ * Height Limit
+ * ===== ===== =====
+ */
+.height-max ( @value: 0, @zoom: 1 )
+{
+	max-height: @value * @zoom;
+}
+.height-min ( @value: 0, @zoom: 1 )
+{
+	min-height: @value * @zoom;
+}
+.height-limit ( @min: 0, @max: 0 )
+{
+	.height-min( @min );
+	.height-max( @max );
+}
+
+/* !!
+ * Margin
+ * ===== ===== =====
+ */
+
+.margin ( @value: 0, @zoom: 1 )
+{
+	margin: @value * @zoom;
+}
+
+.margin-top ( @value: 0, @zoom: 1 )
+{
+	margin-top: @value * @zoom;
+}
+.margin-left ( @value: 0, @zoom: 1 )
+{
+	margin-left: @value * @zoom;
+}
+.margin-right ( @value: 0, @zoom: 1 )
+{
+	margin-right: @value * @zoom;
+}
+.margin-bottom ( @value: 0, @zoom: 1 )
+{
+	margin-bottom: @value * @zoom;
+}
+
+.margin-horizontal ( @value: 0, @zoom: 1 )
+{
+	.margin-left( @value, @zoom );
+	.margin-right( @value, @zoom );
+}
+.margin-vertical ( @value: 0, @zoom: 1 )
+{
+	.margin-top( @value, @zoom );
+	.margin-bottom( @value, @zoom );
+}
+
+.margin-default
+{
+	.margin(0);
+}
+
+.margin-top-default
+{
+	.margin-top(0);
+}
+.margin-left-default
+{
+	.margin-left(0);
+}
+.margin-right-default
+{
+	.margin-right(0);
+}
+.margin-bottom-default
+{
+	.margin-bottom(0);
+}
+
+.margin-center
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* !!
+ * Padding
+ * ===== ===== =====
+ */
+
+.padding ( @value: 0, @zoom: 1 )
+{
+	padding: @value * @zoom;
+}
+
+.padding-top ( @value: 0, @zoom: 1 )
+{
+	padding-top: @value * @zoom;
+}
+.padding-left ( @value: 0, @zoom: 1 )
+{
+	padding-left: @value * @zoom;
+}
+.padding-right ( @value: 0, @zoom: 1 )
+{
+	padding-right: @value * @zoom;
+}
+.padding-bottom ( @value: 0, @zoom: 1 )
+{
+	padding-bottom: @value * @zoom;
+}
+
+.padding-horizontal ( @value: 0, @zoom: 1 )
+{
+	.padding-left( @value, @zoom );
+	.padding-right( @value, @zoom );
+}
+.padding-vertical ( @value: 0, @zoom: 1 )
+{
+	.padding-top( @value, @zoom );
+	.padding-bottom( @value, @zoom );
+}
+
+.padding-default
+{
+	.padding(0);
+}
+
+.padding-top-default
+{
+	.padding-top(0);
+}
+.padding-left-default
+{
+	.padding-left(0);
+}
+.padding-right-default
+{
+	.padding-right(0);
+}
+.padding-bottom-default
+{
+	.padding-bottom(0);
+}

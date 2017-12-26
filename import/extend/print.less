@@ -1,0 +1,21 @@
+/* !!
+ * Print
+ * ===== ===== =====
+ */
+.page-inside ( @mode: auto )
+{
+	page-break-inside: @mode;
+}
+.page-avoid
+{
+	.page-inside( avoid );
+}
+
+.page-before ( @mode: auto )
+{
+	page-break-before: @mode;
+}
+.page-after ( @mode: auto )
+{
+	page-break-after: @mode;
+}

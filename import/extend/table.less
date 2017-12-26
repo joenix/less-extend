@@ -1,0 +1,61 @@
+/* !!
+ * Table
+ * ===== ===== =====
+ */
+.table-fixed
+{
+	table-layout: fixed;
+}
+.table-separate
+{
+	border-collapse: separate;
+}
+.table-collapse ( @space: 1px )
+{
+	border-collapse: collapse;
+	border-spacing: @space;
+}
+
+
+/* !!
+ * Caption
+ * ===== ===== =====
+ */
+.caption-side ( @direct: top )
+{
+	caption-side: @direct;
+}
+.caption-top
+{
+	.caption-side( top );
+}
+.caption-left
+{
+	.caption-side( left );
+}
+.caption-right
+{
+	.caption-side( right );
+}
+.caption-bottom
+{
+	.caption-side( bottom );
+}
+
+
+/* !!
+ * Cell
+ * ===== ===== =====
+ */
+.empty-cells ( @mode: show )
+{
+	empty-cells: @mode;
+}
+.cell-show
+{
+	.empty-cells( show );
+}
+.cell-hide
+{
+	.empty-cells( hide );
+}

@@ -1,0 +1,32 @@
+.frame ( @name, @content, @prefix ) when ( @prefix = def )
+{
+	@keyframes @name {
+		@content();
+	}
+}
+.frame ( @name, @content, @prefix ) when ( @prefix = o )
+{
+	@-o-keyframes @name {
+		@content();
+	}
+}
+.frame ( @name, @content, @prefix ) when ( @prefix = moz )
+{
+	@-moz-keyframes @name {
+		@content();
+	}
+}
+.frame ( @name, @content, @prefix ) when ( @prefix = webkit )
+{
+	@-webkit-keyframes @name {
+		@content();
+	}
+}
+
+.key ( @name, @content )
+{
+	.frame( @name, @content, o );
+	.frame( @name, @content, moz );
+	.frame( @name, @content, webkit );
+	.frame( @name, @content, def );
+}

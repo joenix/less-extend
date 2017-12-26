@@ -1,0 +1,16 @@
+/* !!
+ * Shadow
+ * ===== ===== =====
+ */
+.shadow ( @value: none )
+{
+	box-shadow: @value;
+}
+.shadow-in ( @value: none )
+{
+	.shadow( @value inset );
+}
+.shadow-no
+{
+	.shadow( none );
+}

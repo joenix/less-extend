@@ -1,0 +1,52 @@
+/* !!
+ * Overflow
+ * ===== ===== =====
+ */
+.overflow ( @mode: visible )
+{
+	overflow: @mode;
+}
+.over-x ( @mode: visible )
+{
+	overflow-x: @mode;
+}
+.over-y ( @mode: visible )
+{
+	overflow-y: @mode;
+}
+
+.visible
+{
+	.overflow( visible );
+}
+.hidden
+{
+	.overflow( hidden );
+}
+.scroll
+{
+	.overflow( scroll );
+}
+.scroll-x
+{
+	.over-x( auto );
+	.over-y( hidden );
+}
+.scroll-y
+{
+	.over-x( hidden );
+	.over-y( auto );
+}
+.over-auto
+{
+	.overflow( auto );
+}
+
+/* !!
+ * Clip
+ * ===== ===== =====
+ */
+.clip ( @rect: auto auto auto auto )
+{
+	clip: rect( @rect );
+}

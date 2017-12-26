@@ -1,0 +1,127 @@
+/* !!
+ * List
+ * ===== ===== =====
+ */
+.list ( @value: none, @mode: inside )
+{
+	list-style: @arguments;
+}
+.list-position ( @mode: inside )
+{
+	list-style-position: @mode;
+}
+
+// 列表样式
+.list-type ( @mode: disc )
+{
+	list-style-type: @mode;
+}
+
+// 实心圆
+.list-disc
+{
+	.list-type( disc );
+}
+// 空心圆
+.list-circle
+{
+	.list-type( circle );
+}
+// 实心方块
+.list-square
+{
+	.list-type( square );
+}
+
+// 数字
+.list-decimal
+{
+	.list-type( decimal );
+}
+// 数字 补0
+.list-zero
+{
+	.list-type( decimal-leading-zero );
+}
+
+// 大写中文
+.list-china
+{
+	.list-type( cjk-ideographic );
+}
+
+// 小写罗马数字
+.list-roman-lower
+{
+	.list-type( lower-roman );
+}
+// 大写罗马数字
+.list-roman-upper
+{
+	.list-type( upper-roman );
+}
+
+// 小写英文字母
+.list-alpha-lower
+{
+	.list-type( lower-alpha );
+}
+// 大写英文字母
+.list-alpha-upper
+{
+	.list-type( upper-alpha );
+}
+
+// 小写拉丁字母
+.list-latin-lower
+{
+	.list-type( lower-latin );
+}
+// 大写拉丁字母
+.list-latin-upper
+{
+	.list-type( uper-latin );
+}
+
+// 希腊字母
+.list-greek
+{
+	.list-type( lower-greek );
+}
+
+// 传统的希伯来编号方式
+.list-hebrew
+{
+	.list-type( hebrew );
+}
+// 传统的亚美尼亚编号方式
+.list-armenian
+{
+	.list-type( armenian );
+}
+// 传统的乔治亚编号方式
+.list-georgian
+{
+	.list-type( georgian );
+}
+
+// a, i, u, e, o, ka, ki
+.list-hiragana
+{
+	.list-type( hiragana );
+}
+// A, I, U, E, O, KA, KI
+.list-katakana
+{
+	.list-type( katakana );
+}
+// i, ro, ha, ni, ho, he, to
+.list-hiragana-iroha
+{
+	.list-type( hiragana-iroha );
+}
+// I, RO, HA, NI, HO, HE, TO
+.list-katakana-iroha
+{
+	.list-type( katakana-iroha );
+}

@@ -1,0 +1,21 @@
+/* !!
+ * Opacity
+ * ===== ===== =====
+ */
+.opacity ( @value: 1 )
+{
+	opacity: @value;
+	filter: ~'alpha( opacity = @value * 100 )';
+}
+.opacity-show
+{
+	.opacity( 1 );
+}
+.opacity-hide
+{
+	.opacity( 0 );
+}
+.opacity-half
+{
+	.opacity( 0.5 );
+}
