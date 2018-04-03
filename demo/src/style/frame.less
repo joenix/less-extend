@@ -1,0 +1,254 @@
+body
+{
+	.hidden;
+}
+
+.key(
+
+	fade,
+
+	{
+		0%
+		{
+			.opacity( 0 );
+		}
+
+		100%
+		{
+			.opacity( 1 );
+		}
+	}
+);
+
+.app
+{
+	.height-percent( 1 );
+
+	.animation( fade, @speed, linear );
+}
+
+
+
+// Dark
+@color-dark: #1f2d3d;
+@color-dark-light: #324057;
+@color-dark-extra: #475669;
+
+// Silver
+@color-silver: #8492A6;
+@color-silver-light: #99a9bf;
+@color-silver-extra: #c0ccda;
+
+// Ash
+@color-ash: #d3dce6;
+@color-ash-light: #e5e9f2;
+@color-ash-extra: #eff2f7;
+
+// White
+@color-white: #ffffff;
+@color-white-extra: #f9fafc;
+
+// Black
+@color-black: #2d2f33;
+@color-black-light: #5a5e66;
+@color-black-extra: #878d99;
+@color-black-spirit: #b4bccc;
+
+// Gray
+@color-gray: #d8dce5;
+@color-gray-light: #dfe4ed;
+@color-gray-extra: #e6ebf5;
+@color-gray-spirit: #edf2fc;
+
+
+/* !!
+ * Special Thanks To: 陈琳
+ * ===== ===== =====
+ */
+
+@space-top: .6rem;
+@space-side: 2.4rem;
+
+
+h1
+{
+	&:hover
+	{
+		bdo
+		{
+			&.white
+			{
+				.color( @color-white );
+			}
+			&.deep
+			{
+				.color-darken( @blue, .1 );
+			}
+			&.blue
+			{
+				.color( @blue );
+			}
+			&.green
+			{
+				.color( @green );
+			}
+			&.orange
+			{
+				.color( @orange );
+			}
+			&.russetish
+			{
+				.color-darken( @red, .2 );
+			}
+			&.red
+			{
+				.color( @red );
+			}
+		}
+
+		bdo
+		{
+			&.white
+			{
+				.effect( all, @speed, linear, .1s );
+			}
+			&.deep
+			{
+				.effect( all, @speed, linear, .4s );
+			}
+			&.blue
+			{
+				.effect( all, @speed, linear, .5s );
+			}
+			&.green
+			{
+				.effect( all, @speed, linear, .6s );
+			}
+			&.orange
+			{
+				.effect( all, @speed, linear, .7s );
+			}
+			&.red
+			{
+				.effect( all, @speed, linear, .8s );
+			}
+			&.russetish
+			{
+				.effect( all, @speed, linear, .9s );
+			}
+		}
+	}
+}
+
+header,
+aside,
+main
+{
+	.fixed;
+}
+
+header
+{
+	.height( @space-top );
+	.color( @color-silver );
+	.background-darken( @color-dark, .05 );
+
+	.top;
+	.left;
+	.right;
+
+	.clearfix;
+
+	h1,
+	span
+	{
+		.line-height( @space-top );
+		.padding-horizontal( .1rem );
+	}
+
+	h1
+	{
+		.float-left;
+
+		.size( .2rem );
+
+		&:hover
+		{
+			.color( @color-silver-extra );
+		}
+	}
+
+	span
+	{
+		.float-right;
+	}
+}
+
+aside
+{
+	.width( @space-side );
+	.background-color( @color-dark );
+
+	.top( @space-top );
+	.bottom;
+
+	.scroll-y;
+
+	nav
+	{}
+
+	a
+	{
+		.line-height( 2 );
+		.color( @color-silver );
+		.block;
+		.padding-horizontal( .1rem );
+	}
+
+	dl
+	{
+		.margin-bottom( .1rem );
+
+		&:first-child
+		{
+			.margin-top( .1rem );
+		}
+	}
+
+	dt
+	{
+		a
+		{
+			.color( @color-gray-extra );
+		}
+	}
+
+	dd
+	{
+		a
+		{
+			&.active
+			{
+				.color( @color-black );
+				.background-color( lighten( @color-dark, 35% ) );
+			}
+
+			&:hover
+			{
+				.color( @color-gray-light );
+				.background-color( darken( @color-dark, 5% ) );
+			}
+		}
+	}
+}
+
+main
+{
+	.top( @space-top );
+	.bottom;
+
+	.left( @space-side );
+	.right;
+
+	.scroll-y;
+}

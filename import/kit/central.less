@@ -1,0 +1,26 @@
+.central ( @mode: absolute )
+{
+	.top( 50% );
+	.left( 50% );
+
+	.position( @mode );
+
+	.pre( transform, translate( -50%,-50% ) );
+}
+
+.central-x ( @mode: absolute )
+{
+	.left( 50% );
+
+	.position( @mode );
+
+	.pre( transform, translateX( -50% ) );
+}
+.central-y ( @mode: absolute )
+{
+	.top( 50% );
+
+	.position( @mode );
+
+	.pre( transform, translateY( -50% ) );
+}

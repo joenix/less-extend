@@ -7,11 +7,11 @@
 	color: @value;
 }
 
-.color-lighten ( @value: transparent, @ratio: 0 )
+.color-lighten ( @value: @transparent, @ratio: 0 )
 {
 	.color( lighten( @value, percentage( @ratio ) ) );
 }
-.color-darken ( @value: transparent, @ratio: 0 )
+.color-darken ( @value: @transparent, @ratio: 0 )
 {
 	.color( darken( @value, percentage( @ratio ) ) );
 }
@@ -36,11 +36,11 @@
 
 .hsv ( @hue: 0, @saturation: 1, @value: 1 )
 {
-	.color( hsl( @hue, percentage( @saturation ), percentage( @value ) ) );
+	.color( hsv( @hue, percentage( @saturation ), percentage( @value ) ) );
 }
 .hsva ( @hue: 0, @saturation: 1, @value: 1, @alpha: 1 )
 {
-	.color( hsla( @hue, percentage( @saturation ), percentage( @value ), @alpha ) );
+	.color( hsva( @hue, percentage( @saturation ), percentage( @value ), @alpha ) );
 }
 
 .transparent

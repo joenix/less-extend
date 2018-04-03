@@ -12,6 +12,15 @@
 	background-color: @color;
 }
 
+.background-lighten ( @color: @transparent, @ratio: 0 )
+{
+	.background-color( lighten( @color, percentage( @ratio ) ) );
+}
+.background-darken ( @color: @transparent, @ratio: 0 )
+{
+	.background-color( darken( @color, percentage( @ratio ) ) );
+}
+
 .background-image ( @url: '' )
 {
 	background-image: url( @url );
@@ -27,22 +36,86 @@
 	background-position: @mode;
 }
 
+
 .background-attachment ( @mode: scroll )
 {
 	background-attachment: @mode;
 }
+
+.background-fixed
+{
+	.background-attachment( fixed );
+}
+
+.background-scroll
+{
+	.background-attachment( scroll );
+}
+
+.background-local
+{
+	.background-attachment( local );
+}
+
 
 .background-origin ( @mode: padding-box )
 {
 	background-origin: @mode;
 }
 
+.background-origin-padding
+{
+	.background-origin( padding-box );
+}
+
+.background-origin-border
+{
+	.background-origin( border-box );
+}
+
+.background-origin-content
+{
+	.background-origin( content-box );
+}
+
+
 .background-clip ( @mode: border-box )
 {
 	background-clip: @mode;
 }
 
+.background-clip-padding
+{
+	.background-clip( padding-box );
+}
+
+.background-clip-border
+{
+	.background-clip( border-box );
+}
+
+.background-clip-content
+{
+	.background-clip( content-box );
+}
+
+.background-clip-text
+{
+	.background-clip( text );
+}
+
+
 .background-size ( @mode: auto )
 {
 	background-size: @mode;
+}
+
+.background-cover
+{
+	.background-size( cover );
+}
+
+.background-contain
+{
+	.background-size( contain );
 }

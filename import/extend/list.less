@@ -6,9 +6,19 @@
 {
 	list-style: @arguments;
 }
+
+
 .list-position ( @mode: inside )
 {
 	list-style-position: @mode;
+}
+.list-in
+{
+	.list-position( inside );
+}
+.list-out
+{
+	.list-position( outside );
 }
 
 // 列表样式

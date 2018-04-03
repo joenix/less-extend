@@ -1,0 +1,26 @@
+.grid-loop ( @tax: 0 ) when ( @tax > 0 )
+{
+	@space: percentage( 1 / @tax );
+
+	.grid-row-@{tax}
+	{
+		.grid-col
+		{
+			width: @space
+		}
+
+		.col-loop ( @tax, @space );
+	}
+
+	.grid-loop( @tax - 1 );
+}
+
+.col-loop ( @tax: 0, @space: 1 ) when ( @tax > 0 )
+{
+	.grid-col-@{tax}
+	{
+		width: @tax * @space;
+	}
+
+	.col-loop ( @tax - 1, @space );
+}

@@ -1,0 +1,18 @@
+/* !!
+ * Clearfix
+ * ===== ===== =====
+ */
+.clearfix
+{
+	&:before,
+	&:after
+	{
+		visibility: hidden;
+		display: table;
+		content: '';
+	}
+	&:after
+	{
+		clear: both;
+	}
+}

@@ -1,0 +1,9 @@
+.chess ( @size: @unit, @light: @smoke, @dark: transparent )
+{
+	background-color: @color-white;
+	background-size: @size * 2 @size * 2;
+	background-position: 0 0, @size @size;
+
+	background-image: linear-gradient(45deg, @light 25%, @dark 25%, @dark 75%, @light 75%, @light),
+					  linear-gradient(45deg, @light 25%, @dark 25%, @dark 75%, @light 75%, @light);
+}

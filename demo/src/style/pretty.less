@@ -1,0 +1,79 @@
+.pretty
+{
+
+	// Page Index
+	&.index
+	{
+		.height( 6.4rem );
+
+		section
+		{
+			.width-percent( 1 );
+			.height-percent( 1 );
+
+			.relative;
+		}
+
+		h1
+		{
+			.central;
+
+			.size( @unit * 6 );
+		}
+	}
+
+	// Colour Slogan
+	.colour
+	{
+		.size( .3rem );
+
+		.color( @smoke );
+
+		&:hover
+		{
+			bdo
+			{
+				&.white
+				{
+					.color( @color-black );
+				}
+			}
+		}
+	}
+
+	h4,
+	h5,
+	h6
+	{
+		.border-bottom;
+	}
+
+	section
+	{
+		.margin( @unit * 2 );
+	}
+
+	pre
+	{
+		.padding-vertical;
+	}
+
+	kbd
+	{
+		.margin-right( @unit );
+
+		.margin-bottom( @unit );
+
+		.padding-horizontal( @unit );
+
+		.padding-vertical( @unit );
+
+		&.color
+		{
+			.color( @color-white );
+
+			.text-shadow( 0 0 1px rgba(0, 0, 0, .64) );
+		}
+	}
+
+}

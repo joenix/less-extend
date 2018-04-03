@@ -1,6 +1,6 @@
 # Less Extend
-[![npm version](https://img.shields.io/badge/npm-2.0.0-red.svg)](https://img.shields.io/badge/npm-2.0.0-red.svg)
-[![github version](https://img.shields.io/badge/github-2.0.0-blue.svg)](https://img.shields.io/badge/github-2.0.0-blue.svg)
+[![npm version](https://img.shields.io/badge/npm-3.0.2-red.svg)](https://img.shields.io/badge/npm-3.0.2-red.svg)
+[![github version](https://img.shields.io/badge/github-3.0.2-blue.svg)](https://img.shields.io/badge/github-3.0.2-blue.svg)
 
 ` Less Extend ` is A Less Extention For Faster Efficient Develop.
 
@@ -18,25 +18,33 @@ npm install --save-dev less-extend
 ```
 
 
-#### If Failed ~
+#### If Failed in Webpack ~
 
 ```console
 npm install --save-dev less-loader less
 ```
 
 
-#### Import into Less File !
+#### Import Less File !
 
 ```css
-@import '~less-extend/index.less';
+@import '~less-extend/index.less'
 ```
 
 
 
+## [Document](http://less-extend.joenix.com/)
 
-## Demo Page
+
+
+## Demo Page ( Vue Cli )
 ```console
-/demo/index.html
+1. cd /demo
+
+2. npm i
+
+3. npm start
+
 ```
 
 

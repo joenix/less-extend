@@ -160,9 +160,13 @@
  */
 .point-event ( @mode: auto )
 {
-	point-event: @mode;
+	point-events: @mode;
 }
 .point-none
 {
 	.point-event( none );
+}
+.point-can
+{
+	.point-event( auto );
 }

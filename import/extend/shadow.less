@@ -14,3 +14,21 @@
 {
 	.shadow( none );
 }
+
+
+/* !!
+ * Text Shadow
+ * ===== ===== =====
+ */
+.text-shadow ( @value: none )
+{
+	text-shadow: @value;
+}
+.text-shadow-in ( @value: none )
+{
+	.text-shadow( @value inset );
+}
+.text-shadow-no
+{
+	.text-shadow( none );
+}

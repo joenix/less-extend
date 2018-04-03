@@ -23,3 +23,12 @@
 {
 	border-bottom-right-radius: @value;
 }
+
+.radius ( @value: 0 )
+{
+	.border-radius( @value );
+}
+.circle
+{
+	.radius( 100% );
+}

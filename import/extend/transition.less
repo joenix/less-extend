@@ -45,3 +45,10 @@
 {
 	.pre( transition-delay, @value );
 }
+
+
+// Short Cut
+.effect ( @property: all, @duration: .24s, @function: linear, @delay: .12s )
+{
+	.transition( @property, @duration, @function, @delay );
+}

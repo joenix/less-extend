@@ -45,6 +45,21 @@
 {
 	bottom: @value;
 }
+.omni-horizontal ( @value: 0 )
+{
+	.left( @value );
+	.right( @value );
+}
+.omni-vertical ( @value: 0 )
+{
+	.top( @value );
+	.bottom( @value );
+}
+.omni ( @value: 0 )
+{
+	.omni-horizontal( @value );
+	.omni-vertical( @value );
+}
 
 
 /* !!

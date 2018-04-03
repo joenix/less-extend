@@ -78,22 +78,44 @@
  * Decoration
  * ===== ===== =====
  */
-.text-decoration ( @mode: none )
+.decoration ( @mode: none )
 {
 	text-decoration: @mode;
 }
 
-.text-overline
+.text-over
 {
-	.text-decoration( overline );
+	.decoration( overline );
 }
-.text-underline
+.text-under
 {
-	.text-decoration( underline );
+	.decoration( underline );
 }
 .text-cross
 {
-	.text-decoration( line-through );
+	.decoration( line-through );
+}
+
+
+/* !!
+ * Transform
+ * ===== ===== =====
+ */
+.text-transform ( @mode: none )
+{
+	text-transform: @mode;
+}
+.capitalize
+{
+	.text-transform( capitalize );
+}
+.lower
+{
+	.text-transform( lowercase );
+}
+.upper
+{
+	.text-transform( uppercase );
 }
 
 
@@ -151,4 +173,22 @@
 .select-all
 {
 	.user-select( all );
+}
+
+
+/* !!
+ * Text Break
+ * ===== ===== =====
+ */
+.text-keep
+{
+	word-wrap: normal;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+.text-break
+{
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: pre-line;
 }

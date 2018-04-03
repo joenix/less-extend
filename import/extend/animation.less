@@ -11,7 +11,7 @@
  * State:     执行状态
  * ===== ===== =====
  */
-.animation ( @name: none, @duration: 0s, @function: linear, @delay: 0s, @count: 1, @direction: normal, @fill: none, @state: running )
+.animation ( @name: none, @duration: 0s, @function: linear, @delay: 0s, @count: 1, @direction: normal, @fill: both, @state: running )
 {
 	.pre( animation, @arguments );
 }
@@ -40,7 +40,7 @@
  * cubic-bezier: (<number>, <number>, <number>, <number>)
  * ===== ===== =====
  */
-.animation-function ( @value: 0s )
+.animation-function ( @value: linear )
 {
 	.pre( animation-timing-function, @value );
 }

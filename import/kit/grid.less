@@ -1,0 +1,15 @@
+.grid-loop( 24 );
+
+[class*="grid-row"]
+{
+	.clearfix;
+
+	.margin-horizontal( -@unit );
+
+	& > [class*="grid-col"]
+	{
+		.float-left;
+
+		.padding-horizontal( @unit );
+	}
+}

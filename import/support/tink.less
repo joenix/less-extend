@@ -1,0 +1,39 @@
+.tink ( @color, @tax: 0, @tolerance: 4 )
+{
+	color: hsl(
+
+		hue( @color ),
+
+		saturation( @color ) * @tax * @tolerance * 3,
+
+		lightness( @color )  * @tax * @tolerance * 2
+
+	);
+}
+
+.tink-background ( @color, @tax: 0, @tolerance: 4 )
+{
+	background-color: hsl(
+
+		hue( @color ),
+
+		saturation( @color ) + @tax * @tolerance * 2.4,
+
+		lightness( @color )  + @tax * @tolerance * 1.8
+
+	);
+}
+
+.tink-loop ( @name: '', @color: '', @max: 10, @tax: 0 ) when ( @max > @tax )
+{
+	.@{name}-@{tax}
+	{
+		.tink( @color, @tax - 5 );
+	}
+	.@{name}-background-@{tax}
+	{
+		.tink-background( @color, @tax - 5 );
+	}
+
+	.tink-loop( @name, @color, @max, @tax + 1 );
+}

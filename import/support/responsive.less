@@ -1,0 +1,10 @@
+.responsive ( @min: 0, @max: 0, @sheet: '', @essence )
+{
+	@media ( min-width: @min ) and ( max-width: @max )
+	{
+		.@{sheet}
+		{
+			@essence();
+		}
+	}
+}
