@@ -7,6 +7,8 @@ Vue.use(Router);
 
 const List = [
 
+	'demo',
+
 	'index',
 
 		'description',

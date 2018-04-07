@@ -20,7 +20,7 @@
 
 <pre>
 <code class="lang-less">
-// 干杯 (彩蛋)
+// 象棋 (彩蛋)
 .chess;
 </code>
 </pre>

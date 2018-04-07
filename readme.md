@@ -1,6 +1,6 @@
 # Less Extend
-[![npm version](https://img.shields.io/badge/npm-3.0.2-red.svg)](https://img.shields.io/badge/npm-3.0.2-red.svg)
-[![github version](https://img.shields.io/badge/github-3.0.2-blue.svg)](https://img.shields.io/badge/github-3.0.2-blue.svg)
+[![npm version](https://img.shields.io/badge/npm-3.0.19-red.svg)](https://img.shields.io/badge/npm-3.0.19-red.svg)
+[![github version](https://img.shields.io/badge/github-3.0.19-blue.svg)](https://img.shields.io/badge/github-3.0.19-blue.svg)
 
 ` Less Extend ` is A Less Extention For Faster Efficient Develop.
 
@@ -50,3 +50,7 @@ npm install --save-dev less-loader less
 
 ## TKS 4 Normalize
 - [Github.Normalize](https://github.com/necolas/normalize.css)
+
+
+## LICENSE
+[MIT](LICENSE)

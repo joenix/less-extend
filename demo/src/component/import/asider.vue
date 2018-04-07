@@ -102,7 +102,7 @@ export default {
 					// responsive: '响应式',
 					// caret: '箭头',
 					// drop: '下拉',
-					chess: '干杯 (彩蛋)'
+					chess: '象棋 (彩蛋)'
 				},
 				// PLUGIN
 				plugin: {
