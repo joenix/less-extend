@@ -1,6 +1,6 @@
 {
   "name": "less-extend",
-  "version": "3.0.19",
+  "version": "3.0.24",
   "description": "An extend package for less",
   "main": "index.less",
   "scripts": {
@@ -12,9 +12,9 @@
     "less extend"
   ],
   "author": "joenix",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^8.0.0"
   },
   "devDependencies": {}
 }
